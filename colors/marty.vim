@@ -47,6 +47,7 @@ call s:f("Comment", s:inactive)
 
 call s:f("Identifier", s:accent1)
 call s:f("Directory", s:accent1)
+call s:f("String", s:accent1)
 
 call s:f("StatusLine", s:accent2)
 call s:f("TabLineSel", s:accent2)
