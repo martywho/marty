@@ -15,10 +15,11 @@ let colors_name="marty"
 let s:white       = "254"
 let s:attention   = "197"
 let s:inactive    = "240"
-let s:main        = "168"
+let s:main1       = "168"
+let s:main2       = "067"
 let s:accent1     = "151"
 let s:accent2     = "179"
-let s:accent3     = "190"
+let s:accent3     = "030"
 
 function! s:h(group, fg, bg)
   exec "hi " . a:group . " ctermfg=" . a:fg . " ctermbg=" . a:bg . " cterm=NONE"
@@ -32,7 +33,8 @@ function! s:r(group)
   exec "hi " . a:group . " ctermfg=NONE ctermbg=NONE cterm=NONE"
 endfun
 
-call s:f("Statement", s:main)
+call s:f("Statement", s:main1)
+call s:f("Identifier", s:main2)
 
 call s:f("Normal", s:white)
 call s:f("String", s:white)
@@ -45,7 +47,6 @@ call s:f("TabLine", s:inactive)
 call s:f("LineNr", s:inactive)
 call s:f("Comment", s:inactive)
 
-call s:f("Identifier", s:accent1)
 call s:f("Directory", s:accent1)
 call s:f("String", s:accent1)
 
@@ -55,12 +56,13 @@ call s:f("CursorLine", s:accent2)
 call s:f("CursorLineNr", s:accent2)
 call s:f("Operator", s:accent2)
 call s:f("Type", s:accent2)
+call s:f("Define", s:accent2)
 call s:f("Function", s:accent2)
-call s:f("Number", s:accent2)
-call s:f("Float", s:accent2)
-call s:f("Boolean", s:accent2)
-call s:f("Character", s:accent2)
 
+call s:f("Number", s:accent3)
+call s:f("Float", s:accent3)
+call s:f("Boolean", s:accent3)
+call s:f("Character", s:accent3)
 call s:f("Title", s:accent3)
 
 call s:f("Error", s:attention)
