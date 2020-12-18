@@ -9,8 +9,8 @@ set background=dark
 highlight clear
 syntax reset
 
-let g:colors_name="marty"
-let colors_name="marty"
+let g:colors_name = "marty"
+let colors_name = "marty"
 
 let s:white       = "254"
 let s:attention   = "197"
@@ -35,9 +35,9 @@ endfun
 
 call s:f("Statement", s:main1)
 call s:f("Identifier", s:main2)
+call s:f("Directory", s:main2)
 
 call s:f("Normal", s:white)
-call s:f("String", s:white)
 
 call s:f("VertSplit", s:inactive)
 call s:f("NonText", s:inactive)
@@ -46,8 +46,12 @@ call s:f("StatusLineNC", s:inactive)
 call s:f("TabLine", s:inactive)
 call s:f("LineNr", s:inactive)
 call s:f("Comment", s:inactive)
+call s:f("GitGutterAdd", s:inactive)
+call s:f("GitGutterChange", s:inactive)
+call s:f("GitGutterChangeDelete", s:inactive)
+call s:f("GitGutterDelete", s:inactive)
+call s:f("Todo", s:inactive)
 
-call s:f("Directory", s:accent1)
 call s:f("String", s:accent1)
 
 call s:f("StatusLine", s:accent2)
@@ -66,6 +70,8 @@ call s:f("Character", s:accent3)
 call s:f("Title", s:accent3)
 
 call s:f("Error", s:attention)
+call s:f("ALEError", s:attention)
+call s:f("ALEWarning", s:attention)
 call s:f("SpellBad", s:attention)
 call s:f("MatchParen", s:attention)
 
